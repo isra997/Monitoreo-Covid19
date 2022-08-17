@@ -1,0 +1,555 @@
+[
+    {
+        "id": "bafc34bdcbcda542",
+        "type": "tab",
+        "label": "Prueba1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d469b39efe86624c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+    {
+        "id": "30de6c1f5d06aaa9",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n    \"content\": msg.payload[3].fecha +\"\\n\"+ \"\\nTemperatura:\"+ msg.payload[3].temperatura + \"\\u2103\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1320,
+        "wires": [
+            [
+                "7d74ed3951fe1f39"
+            ]
+        ]
+    },
+    {
+        "id": "7d74ed3951fe1f39",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2b5d1e422ac5d4a",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n    \"content\": msg.payload[2].fecha+\"\\n\" + \"\\nTemperatura:\"+ msg.payload[2].temperatura + \"\\u2103\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1280,
+        "wires": [
+            [
+                "8f6ab7963b919b02"
+            ]
+        ]
+    },
+    {
+        "id": "8f6ab7963b919b02",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ae3ca76871215d4",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n    \"content\": msg.payload[1].fecha +\"\\n\"+ \"\\nTemperatura:\"+ msg.payload[1].temperatura + \"\\u2103\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1240,
+        "wires": [
+            [
+                "ec3e834a9489daed"
+            ]
+        ]
+    },
+    {
+        "id": "ec3e834a9489daed",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9723afebe4663edd",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n    \"content\": msg.payload[0].fecha +\"\\n\"+ \"\\nTemperatura:\"  + msg.payload[0].temperatura + \"\\u2103\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1200,
+        "wires": [
+            [
+                "36588b6e5e8b04c8",
+                "6051e9574e4fda4f"
+            ]
+        ]
+    },
+    {
+        "id": "6051e9574e4fda4f",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36588b6e5e8b04c8",
+        "type": "debug",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "7e804a413a4caa07",
+        "type": "telegram command",
+        "z": "bafc34bdcbcda542",
+        "name": "last_sat",
+        "command": "/lastsat",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "47bb25bcc5769f3c",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 100,
+        "y": 1560,
+        "wires": [
+            [
+                "00f7c0c2e23042b0"
+            ],
+            [
+                "69b6073e68e68114"
+            ]
+        ]
+    },
+    {
+        "id": "00f7c0c2e23042b0",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.topic = \"SELECT saturacion, fecha FROM datos1 ORDER BY id DESC LIMIT 5;\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 1480,
+        "wires": [
+            [
+                "4102221999431cd8"
+            ]
+        ]
+    },
+    {
+        "id": "4102221999431cd8",
+        "type": "mysql",
+        "z": "bafc34bdcbcda542",
+        "mydb": "2e8252837fde2a0e",
+        "name": "",
+        "x": 480,
+        "y": 1480,
+        "wires": [
+            [
+                "c0cc76a48d6d31a8",
+                "905fe4f9336e222d",
+                "725ec624d0e53443",
+                "aababfec3056f059",
+                "6323bfa09548bc3b",
+                "9d11e00be6f75cd4"
+            ]
+        ]
+    },
+    {
+        "id": "69b6073e68e68114",
+        "type": "debug",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "c0cc76a48d6d31a8",
+        "type": "debug",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "66debef267aa9635",
+        "type": "inject",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1480,
+        "wires": [
+            [
+                "00f7c0c2e23042b0"
+            ]
+        ]
+    },
+    {
+        "id": "9d11e00be6f75cd4",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n     \"content\": msg.payload[4].fecha +\"\\n\"+ \"\\nSaturación:\"+ msg.payload[4].saturacion +\"%\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1640,
+        "wires": [
+            [
+                "a10818783075fd72"
+            ]
+        ]
+    },
+    {
+        "id": "a10818783075fd72",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6323bfa09548bc3b",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n     \"content\": msg.payload[3].fecha +\"\\n\"+ \"\\nSaturación:\"+ msg.payload[3].saturacion +\"%\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1600,
+        "wires": [
+            [
+                "90a606113693c2ed"
+            ]
+        ]
+    },
+    {
+        "id": "90a606113693c2ed",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aababfec3056f059",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n     \"content\": msg.payload[2].fecha+\"\\n\" + \"\\nSaturación:\"+ msg.payload[2].saturacion +\"%\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1560,
+        "wires": [
+            [
+                "e551bc0668deaa61"
+            ]
+        ]
+    },
+    {
+        "id": "e551bc0668deaa61",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "725ec624d0e53443",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n     \"content\": msg.payload[1].fecha +\"\\n\"+ \"\\nSaturación:\"+ msg.payload[1].saturacion +\"%\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1520,
+        "wires": [
+            [
+                "d9a004954c70def8"
+            ]
+        ]
+    },
+    {
+        "id": "d9a004954c70def8",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "905fe4f9336e222d",
+        "type": "function",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "func": "msg.payload=\n{\n    \"chatId\": ['1836604670', '5101536169', '2104460175'], \n    \"type\": \"message\",\n    \"content\": msg.payload[0].fecha+\"\\n\" + \"\\nSaturación:\"+ msg.payload[0].saturacion +\"%\"\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1480,
+        "wires": [
+            [
+                "8fec109957d4955c",
+                "a50a157c6202b601"
+            ]
+        ]
+    },
+    {
+        "id": "a50a157c6202b601",
+        "type": "telegram sender",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1230,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fec109957d4955c",
+        "type": "debug",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "887432a4a90bf506",
+        "type": "debug",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "19d43aca51eb4d18",
+        "type": "telegram receiver",
+        "z": "bafc34bdcbcda542",
+        "name": "",
+        "bot": "47bb25bcc5769f3c",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 690,
+        "y": 320,
+        "wires": [
+            [
+                "887432a4a90bf506"
+            ],
+            []
+        ]
+    }
+]
